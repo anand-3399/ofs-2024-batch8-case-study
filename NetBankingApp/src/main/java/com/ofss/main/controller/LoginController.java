@@ -15,6 +15,8 @@ import com.ofss.main.domain.Customer;
 import com.ofss.main.domain.Login;
 import com.ofss.main.service.CustomerService;
 import com.ofss.main.service.LoginService;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RequestMapping("bank")
 @CrossOrigin(origins = "*")
@@ -54,4 +56,16 @@ public class LoginController {
             return ResponseEntity.status(400).body("Login ID already exists");
         }
     }
+	
+	@PostMapping("getcustomerdetails")
+	public ResponseEntity<?> getCustomerDetails(@RequestBody Login login) {
+		Customer customer = customerService.getCustomerByLogin(login);
+		
+		if (customer != null) {
+            return ResponseEntity.ok(customer);
+        } else {
+            return ResponseEntity.status(400).body("Login ID/Password dosnt exists");
+        }
+	}
+	
 }
