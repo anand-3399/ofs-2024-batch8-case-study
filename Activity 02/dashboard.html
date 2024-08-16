@@ -1,0 +1,30 @@
+<!--
+  Copyright (c) 2014, 2024, Oracle and/or its affiliates.
+  Licensed under The Universal Permissive License (UPL), Version 1.0
+  as shown at https://oss.oracle.com/licenses/upl/
+-->
+<div class="oj-hybrid-padding" id="dark-container">
+  <oj-switch label-hint="Dark background" id="contrastBgSwitch" value="{{isContrastBackground}}"></oj-switch>
+  <h1>Form Components Demo</h1>
+  <!-- Form Layout -->
+  <oj-c-form-layout max-columns="2" direction="row" full-width="true">
+
+    <!-- Input Text -->
+    <oj-c-input-text id="text-input" value="{{name}}" label-hint="Enter Name" label-edge="inside"></oj-c-input-text>
+
+    <!-- Input Number -->
+    <oj-c-input-number value="{{salary}}" label-hint="Enter Salary" min="0" step="0"></oj-c-input-number>
+
+    <!-- Input Password -->
+    <oj-c-input-password id="password-input" value="{{password}}" label-hint="Enter Password"
+      label-edge="inside"></oj-c-input-password>
+
+    <!-- Input Date -->
+    <oj-input-date value="{{date}}" label-hint="Enabled" autocomplete="off"></oj-input-date>
+
+    <h3>Hey! <oj-bind-text value="[[name]]"></oj-bind-text></h3>
+    <h3>Your salary is <oj-bind-text value="[[salary]]"></oj-bind-text></h3>
+    <h3>Your password is <oj-bind-text value="[[password]]"></oj-bind-text></h3>
+    <h3>The selected date is <oj-bind-text value="[[date]]"></oj-bind-text></h3>
+  </oj-c-form-layout>
+</div>
