@@ -69,4 +69,11 @@ public class CustomerServiceImpl implements CustomerService{
 	    return null;
 	}
 
+	@Override
+	public Customer updateCustomerDetails(Customer customer) {
+		// TODO Auto-generated method stub
+		loginRepository.save(customer.getLogin());
+		return customerRepository.save(customer);
+	}
+
 }

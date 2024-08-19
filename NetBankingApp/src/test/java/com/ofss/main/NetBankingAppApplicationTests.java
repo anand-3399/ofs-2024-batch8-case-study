@@ -33,5 +33,15 @@ class NetBankingAppApplicationTests {
 		Account account = accountService.getAccountByCustomer(login);
 		System.out.println(account);
 	}
+	
+	@Test
+	void newChck()
+	{
+		Login login = new Login("yash", "yash", 0, null, null);
+		Customer customer = customerService.getCustomerByLogin(login);
+		System.out.println(customer);
+		customer.setAddress("Malad");
+		System.out.println(customerService.updateCustomerDetails(customer));
+	}
 
 }

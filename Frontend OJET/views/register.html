@@ -1,0 +1,33 @@
+<!--
+ Copyright (c) 2014, 2024, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+  <center>
+    <h1>Register Content Area</h1>
+    <div>
+      <h1>
+        Register
+      </h1>
+      <oj-c-form-layout direction="column" full-width="false">
+        <oj-c-input-text id="nameIdInput" value="{{firstName}}" label-hint="Enter First Name" label-edge="inside"></oj-c-input-text>
+        <oj-c-input-text id="nameIdInput" value="{{lastName}}" label-hint="Enter Last Name" label-edge="inside"></oj-c-input-text>
+        <oj-c-input-number id="nameIdInput" value="{{age}}" label-hint="Enter Age" label-edge="inside"></oj-c-input-number>
+        <oj-c-input-text id="nameIdInput" value="{{gender}}" label-hint="Enter Gender" label-edge="inside"></oj-c-input-text>
+
+        <oj-c-input-number id="nameIdInput" value="{{mobile}}" label-hint="Enter Mobile Number"
+          label-edge="inside"></oj-c-input-number>
+        <oj-c-input-text id="nameIdInput" value="{{email}}" label-hint="Enter Email" label-edge="inside"></oj-c-input-text>
+        <oj-c-input-text id="nameIdInput" value="{{address}}" label-hint="Enter Address" label-edge="inside"></oj-c-input-text>
+        <oj-c-input-text id="nameIdInput" value="{{pan}}" label-hint="Enter Pan Number" label-edge="inside"></oj-c-input-text>
+        <oj-c-input-number id="nameIdInput" value="{{aadhar}}" label-hint="Enter Aadhar Number"
+          label-edge="inside"></oj-c-input-number>
+        <oj-c-input-text id="nameIdInput" value="{{loginId}}" label-hint="Enter LoginId" label-edge="inside"></oj-c-input-text>
+        <oj-c-input-password id="password-input" value="{{password}}" label-hint="Enter Password"
+          label-edge="inside"></oj-c-input-password>
+
+        <oj-c-button id="addButton" on-oj-action="[[addRow]]" label="Sign Up" disabled="[[password() == null]]"></oj-c-button>
+      </oj-c-form-layout>
+  </center>
+</div>

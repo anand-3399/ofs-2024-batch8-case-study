@@ -1,0 +1,24 @@
+<!--
+ Copyright (c) 2014, 2024, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+    <center>
+        <h1>Login Content Area</h1>
+        <div>
+            <h1>
+                Sign In
+            </h1>
+            <oj-c-form-layout direction="column" full-width="false">
+                <oj-c-input-text id="nameIdInput" value="{{loginId}}" label-hint="Enter LoginId"
+                    label-edge="inside"></oj-c-input-text>
+                <oj-c-input-password id="password-input" value="{{password}}" label-hint="Enter Password"
+                    label-edge="inside"></oj-c-input-password>
+
+                <oj-c-button id="addButton" on-oj-action="[[addRow]]" label="Login In"
+                    disabled="[[password() == null || loginId() == null ]]"></oj-c-button>
+            </oj-c-form-layout>
+    </center>
+</div>
+</div>
